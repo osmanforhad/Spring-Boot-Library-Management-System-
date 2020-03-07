@@ -8,6 +8,6 @@ public class LmsApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(LmsApplication.class, args);
-	}
+	}//end of the main method
 
-}
+}//end of the class
