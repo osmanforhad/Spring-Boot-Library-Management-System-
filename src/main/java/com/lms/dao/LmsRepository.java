@@ -1,5 +1,11 @@
 package com.lms.dao;
 
-public interface LmsRepository {
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+import com.lms.models.Book;
+
+@Repository
+public interface LmsRepository extends CrudRepository<Book, Long>{
 
 }//end of the interface
