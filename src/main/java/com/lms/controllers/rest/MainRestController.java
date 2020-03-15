@@ -24,7 +24,7 @@ public class MainRestController {
 	
 	@GetMapping(value = "/findAllBooks")/**define whcih request this method will handle and Mapping the url name*/
 	public Collection<Book> getAllBooks(){
-		return lmsService.findAllBooks();
+		return lmsService.findAllBooks(); /**accessing service through the service object and return data*/
 	}//end of the getAllBooks method
 	
 }//end of the MainRestController
