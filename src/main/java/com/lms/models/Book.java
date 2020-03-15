@@ -7,6 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity(name = "lms_tbl") /**mention db table name as a Entity*/
 public class Book {
@@ -27,6 +29,7 @@ public class Book {
 	private String author;
 	
 	@Column(name = "purchase_date") /**annoted the column name as like db table*/
+	@Temporal(TemporalType.DATE)
 	private Date purchaseDate;
 
 	public long getId() {
