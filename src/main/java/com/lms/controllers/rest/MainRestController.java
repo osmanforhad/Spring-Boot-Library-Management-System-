@@ -1,16 +1,30 @@
 package com.lms.controllers.rest;
 
+import java.util.Collection;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.lms.models.Book;
+import com.lms.services.LmsService;
+
 @RestController /**define rest controller annotation*/
 public class MainRestController {
-
-	@GetMapping(value = "/")/**define which request this method will handle*/
+	
+	@Autowired  /**use Autowired annotation for dependency injection*/
+	private LmsService lmsService; /**define Service object*/
+ 
+	@GetMapping(value = "/")/**define whcih request this method will handle and Mapping the url name*/
 	public String hello() {
 		
 		return "Spring Boot Application using MainRestController";
 		
 	}//end of the hello method
+	
+	@GetMapping(value = "/findAllBooks")/**define whcih request this method will handle and Mapping the url name*/
+	public Collection<Book> getAllBooks(){
+		return lmsService.findAllBooks();
+	}//end of the getAllBooks method
 	
 }//end of the MainRestController
