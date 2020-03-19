@@ -39,5 +39,10 @@ public class LmsService {
 		return books;
 		
 	}//end of the findAllBooks method
+	
+	/**method for delete the book*/
+	public void delete(Book id) {
+		lmsRepository.delete(id);
+	}//end of the delete method
 
 }//end of the service class
