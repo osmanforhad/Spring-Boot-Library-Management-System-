@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 15, 2020 at 09:09 AM
+-- Generation Time: Mar 19, 2020 at 06:25 AM
 -- Server version: 5.7.24
 -- PHP Version: 7.2.19
 
@@ -40,7 +40,6 @@ CREATE TABLE `lms_tbl` (
 --
 
 INSERT INTO `lms_tbl` (`id`, `book_name`, `author`, `purchase_date`) VALUES
-(1, 'JAVA', 'Tushar Gerose', '2020-03-09'),
 (2, 'Spring', 'Osman Forhad', '2020-03-15');
 
 --
